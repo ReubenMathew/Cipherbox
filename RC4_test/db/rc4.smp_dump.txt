@@ -1,0 +1,9 @@
+
+State Machine - |rc4|KSState
+Name KSState.0101 KSState.0100 KSState.0011 KSState.0010 KSState.0001 KSState.0000 
+KSState.0000 0 0 0 0 0 0 
+KSState.0001 0 0 0 0 1 1 
+KSState.0010 0 0 0 1 0 1 
+KSState.0011 0 0 1 0 0 1 
+KSState.0100 0 1 0 0 0 1 
+KSState.0101 1 0 0 0 0 1 

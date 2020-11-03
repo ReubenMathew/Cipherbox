@@ -1,0 +1,5 @@
+module rc4(
+	output[5:0] seg_sel,
+	output[7:0] seg_data,
+	input s
+);
