@@ -1,0 +1,36 @@
+module uart_tx(
+	input clk,
+	input activate,
+	input [7:0] data,
+	output active,
+	output tx,
+	output done
+);
+
+// UART_TX States
+parameter IDLE = 3'd0;
+parameter START = 3'd1;
+parameter TRANSMIT = 3'd2;
+parameter STOP = 3'd3;
+parameter CLEANUP = 3'd4;=
+
+reg[2:0] state; 
+
+always @(posedge clk)
+begin
+	// State Machine
+	case (state)
+		IDLE:
+		begin
+			
+		end
+	
+	endcase
+
+end
+
+
+
+
+
+endmodule

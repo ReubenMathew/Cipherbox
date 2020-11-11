@@ -1,0 +1,60 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Reuben/Github/FPGA-Encryption/dev/simulation/modelsim
+vFPGA_Encryption
+Z1 !s110 1605076193
+!i10b 1
+!s100 njJBYP0XTSf5:fFn^0X9P0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ik;mHO=V4]HDme;CGdGhSI2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1605076054
+8C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v
+FC:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v
+!i122 0
+L0 1 30
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1605076193.000000
+!s107 C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Reuben/Github/FPGA-Encryption|C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v|
+!i113 1
+Z6 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+C:/Users/Reuben/Github/FPGA-Encryption
+Z7 tCvgOpt 0
+n@f@p@g@a_@encryption
+vuart_tx
+R1
+!i10b 1
+!s100 X<<[RYi:7Gch2Uaj0Q@@?3
+R2
+IJA9`I]AlCk@6H2dJgARmz0
+R3
+R0
+w1605073559
+8C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v
+FC:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v
+!i122 1
+L0 1 131
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Reuben/Github/FPGA-Encryption/src|C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v|
+!i113 1
+R6
+!s92 -vlog01compat -work work +incdir+C:/Users/Reuben/Github/FPGA-Encryption/src
+R7

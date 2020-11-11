@@ -1,0 +1,31 @@
+module uart_tx_tb();
+
+//	input clk,
+//	input activate,
+//	input [7:0] data,
+//	output active,
+//	output tx,
+//	output done
+
+reg r_activate = 0;
+reg [7:0] tx_data = 0;
+wire tx_active, tx_done;
+wire tx_serial; // tx output serial wire
+
+uart_tx uart_tx0(
+	.clk(clk),
+	.activate(r_activate),
+	.data(tx_data),
+	.active(tx_active),
+	.tx(tx_serial),
+	.done(tx_done)
+);
+
+
+
+
+
+
+//Test Bench
+
+endmodule

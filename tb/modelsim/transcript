@@ -1,0 +1,60 @@
+# Compile of uart_tx_tb.v was successful.
+# Compile of uart_tx.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.uart_tx_tb
+# vsim -gui work.uart_tx_tb 
+# Start time: 01:31:21 on Nov 11,2020
+# Loading work.uart_tx_tb
+# Loading work.uart_tx
+add wave -position insertpoint sim:/uart_tx_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Reuben  Hostname: DESKTOP-0A8P45B  ProcessID: 5792
+#           Attempting to use alternate WLF file "./wlft4jtjf2".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4jtjf2
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 01:36:33 on Nov 11,2020, Elapsed time: 0:05:12
+# Errors: 0, Warnings: 4
