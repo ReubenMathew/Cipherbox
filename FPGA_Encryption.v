@@ -1,24 +1,27 @@
 module FPGA_Encryption(
 	input clk,
-	input activate,
+	input rx,
 	output active,
 	output tx,
 	output done
 );
 
-//	input clk,
-//	input activate,
-//	input [7:0] data,
-//	output active,
-//	output tx,
-//	output done
+wire activate;
 
-reg [7:0] tx_data = 8'hD1;
+wire [7:0] data;
+
+uart_rx uart_rx0(
+	.clk(clk),
+	.rx(rx),
+	.done(activate),
+	.rx_data(data),
+	.rx_state()
+);
 
 uart_tx uart_tx0(
 	.clk(clk),
-	.activate(!activate),
-	.data(tx_data),
+	.activate(activate),
+	.data(data),
 	.active(active),
 	.tx(tx),
 	.done(done),

@@ -22,6 +22,7 @@ assign tx_state = state;
 
 reg[7:0] tx_data = 0;
 
+// 9600 baud = 5208
 // 50000000 / 115200 =  434 Clocks/bit
 parameter CLKS_PER_BIT = 434;
 reg[11:0] clk_counter = 0;

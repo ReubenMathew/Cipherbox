@@ -1,0 +1,13 @@
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# can't read "Startup(-L)": no such element in array
+# Load canceled
+# can't read "Startup(-L)": no such element in array
+# Load canceled

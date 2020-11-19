@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FPGA_Encryption
-Wed Nov 11 01:33:31 2020
+Fri Nov 13 19:09:59 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -14,14 +14,18 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |FPGA_Encryption|uart_tx:uart_tx0|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: uart_tx:uart_tx0
- 13. Port Connectivity Checks: "uart_tx:uart_tx0"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  9. State Machine - |FPGA_Encryption|uart_rx:uart_rx0|state
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: uart_rx:uart_rx0
+ 15. Parameter Settings for User Entity Instance: uart_tx:uart_tx0
+ 16. Port Connectivity Checks: "uart_tx:uart_tx0"
+ 17. Port Connectivity Checks: "uart_rx:uart_rx0"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -48,15 +52,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 11 01:33:31 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 13 19:09:59 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; FPGA_Encryption                             ;
 ; Top-level Entity Name              ; FPGA_Encryption                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 38                                          ;
-;     Total combinational functions  ; 38                                          ;
-;     Dedicated logic registers      ; 24                                          ;
-; Total registers                    ; 24                                          ;
+; Total logic elements               ; 0                                           ;
+;     Total combinational functions  ; 0                                           ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
 ; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -160,11 +164,10 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 12          ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -175,49 +178,48 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
 ; ../FPGA_Encryption.v             ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v ;         ;
 ; ../src/uart_tx.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v     ;         ;
+; ../src/uart_rx.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v     ;         ;
 +----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 38        ;
-;                                             ;           ;
-; Total combinational functions               ; 38        ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 17        ;
-;     -- 3 input functions                    ; 7         ;
-;     -- <=2 input functions                  ; 14        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 27        ;
-;     -- arithmetic mode                      ; 11        ;
-;                                             ;           ;
-; Total registers                             ; 24        ;
-;     -- Dedicated logic registers            ; 24        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 5         ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 24        ;
-; Total fan-out                               ; 196       ;
-; Average fan-out                             ; 2.72      ;
-+---------------------------------------------+-----------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+;                                             ;               ;
+; Total combinational functions               ; 0             ;
+; Logic element usage by number of LUT inputs ;               ;
+;     -- 4 input functions                    ; 0             ;
+;     -- 3 input functions                    ; 0             ;
+;     -- <=2 input functions                  ; 0             ;
+;                                             ;               ;
+; Logic elements by mode                      ;               ;
+;     -- normal mode                          ; 0             ;
+;     -- arithmetic mode                      ; 0             ;
+;                                             ;               ;
+; Total registers                             ; 0             ;
+;     -- Dedicated logic registers            ; 0             ;
+;     -- I/O registers                        ; 0             ;
+;                                             ;               ;
+; I/O pins                                    ; 5             ;
+;                                             ;               ;
+; Embedded Multiplier 9-bit elements          ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; active~output ;
+; Maximum fan-out                             ; 1             ;
+; Total fan-out                               ; 5             ;
+; Average fan-out                             ; 0.50          ;
++---------------------------------------------+---------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                        ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Entity Name     ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-----------------+--------------+
-; |FPGA_Encryption           ; 38 (0)              ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |FPGA_Encryption                  ; FPGA_Encryption ; work         ;
-;    |uart_tx:uart_tx0|      ; 38 (38)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FPGA_Encryption|uart_tx:uart_tx0 ; uart_tx         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+-----------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name     ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
+; |FPGA_Encryption           ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |FPGA_Encryption    ; FPGA_Encryption ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -235,17 +237,75 @@ Encoding Type:  One-Hot
 +----------------+------------+----------------+-------------+------------+---------------+
 
 
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------+
+; State Machine - |FPGA_Encryption|uart_rx:uart_rx0|state                                ;
++----------------+------------+----------------+-------------+-----------+---------------+
+; Name           ; state.STOP ; state.TRANSMIT ; state.START ; state.000 ; state.CLEANUP ;
++----------------+------------+----------------+-------------+-----------+---------------+
+; state.000      ; 0          ; 0              ; 0           ; 0         ; 0             ;
+; state.START    ; 0          ; 0              ; 1           ; 1         ; 0             ;
+; state.TRANSMIT ; 0          ; 1              ; 0           ; 1         ; 0             ;
+; state.STOP     ; 1          ; 0              ; 0           ; 1         ; 0             ;
+; state.CLEANUP  ; 0          ; 0              ; 0           ; 1         ; 1             ;
++----------------+------------+----------------+-------------+-----------+---------------+
+
+
 +---------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                              ;
-+---------------------------------------+-----------------------------------------+
-; Register name                         ; Reason for Removal                      ;
-+---------------------------------------+-----------------------------------------+
-; uart_tx:uart_tx0|tx_data[1..3,5]      ; Stuck at GND due to stuck port data_in  ;
-; uart_tx:uart_tx0|tx_data[4,6,7]       ; Merged with uart_tx:uart_tx0|tx_data[0] ;
-; uart_tx:uart_tx0|state~2              ; Lost fanout                             ;
-; uart_tx:uart_tx0|state~3              ; Lost fanout                             ;
-; Total Number of Removed Registers = 9 ;                                         ;
-+---------------------------------------+-----------------------------------------+
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; uart_tx:uart_tx0|bit_index[0..2]       ; Stuck at GND due to stuck port data_in ;
+; uart_rx:uart_rx0|r_done                ; Stuck at GND due to stuck port data_in ;
+; uart_tx:uart_tx0|tx_data[1..7]         ; Lost fanout                            ;
+; uart_tx:uart_tx0|tx_data[0]            ; Merged with uart_tx:uart_tx0|active    ;
+; uart_tx:uart_tx0|active                ; Stuck at GND due to stuck port data_in ;
+; uart_tx:uart_tx0|done                  ; Stuck at GND due to stuck port data_in ;
+; uart_tx:uart_tx0|state~2               ; Lost fanout                            ;
+; uart_tx:uart_tx0|state~3               ; Lost fanout                            ;
+; uart_rx:uart_rx0|state~2               ; Lost fanout                            ;
+; uart_rx:uart_rx0|state~3               ; Lost fanout                            ;
+; uart_tx:uart_tx0|state.CLEANUP         ; Stuck at GND due to stuck port data_in ;
+; uart_rx:uart_rx0|state.CLEANUP         ; Stuck at GND due to stuck port data_in ;
+; uart_rx:uart_rx0|rx_reg                ; Lost fanout                            ;
+; uart_rx:uart_rx0|clk_counter[0..11]    ; Lost fanout                            ;
+; uart_rx:uart_rx0|rx_r                  ; Lost fanout                            ;
+; uart_tx:uart_tx0|state.START           ; Lost fanout                            ;
+; uart_tx:uart_tx0|state.TRANSMIT        ; Lost fanout                            ;
+; uart_tx:uart_tx0|state.STOP            ; Lost fanout                            ;
+; uart_rx:uart_rx0|state.000             ; Lost fanout                            ;
+; uart_rx:uart_rx0|state.START           ; Lost fanout                            ;
+; uart_rx:uart_rx0|state.TRANSMIT        ; Lost fanout                            ;
+; uart_rx:uart_rx0|state.STOP            ; Lost fanout                            ;
+; uart_tx:uart_tx0|state.IDLE            ; Stuck at GND due to stuck port data_in ;
+; uart_tx:uart_tx0|tx                    ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 43 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                   ;
++--------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                                           ;
++--------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; uart_rx:uart_rx0|state~2       ; Lost Fanouts              ; uart_rx:uart_rx0|rx_reg, uart_rx:uart_rx0|clk_counter[1],                        ;
+;                                ;                           ; uart_rx:uart_rx0|clk_counter[0], uart_rx:uart_rx0|clk_counter[2],                ;
+;                                ;                           ; uart_rx:uart_rx0|rx_r, uart_rx:uart_rx0|state.000, uart_rx:uart_rx0|state.START, ;
+;                                ;                           ; uart_rx:uart_rx0|state.STOP                                                      ;
+; uart_tx:uart_tx0|bit_index[2]  ; Stuck at GND              ; uart_tx:uart_tx0|tx_data[7], uart_tx:uart_tx0|tx_data[6],                        ;
+;                                ; due to stuck port data_in ; uart_tx:uart_tx0|tx_data[5], uart_tx:uart_tx0|tx_data[4],                        ;
+;                                ;                           ; uart_tx:uart_tx0|tx_data[3], uart_tx:uart_tx0|tx_data[2], uart_tx:uart_tx0|tx    ;
+; uart_rx:uart_rx0|r_done        ; Stuck at GND              ; uart_tx:uart_tx0|active, uart_tx:uart_tx0|done                                   ;
+;                                ; due to stuck port data_in ;                                                                                  ;
+; uart_tx:uart_tx0|state~2       ; Lost Fanouts              ; uart_tx:uart_tx0|state.START, uart_tx:uart_tx0|state.STOP                        ;
+; uart_tx:uart_tx0|bit_index[0]  ; Stuck at GND              ; uart_tx:uart_tx0|tx_data[1]                                                      ;
+;                                ; due to stuck port data_in ;                                                                                  ;
+; uart_tx:uart_tx0|state~3       ; Lost Fanouts              ; uart_tx:uart_tx0|state.TRANSMIT                                                  ;
+; uart_rx:uart_rx0|state~3       ; Lost Fanouts              ; uart_rx:uart_rx0|state.TRANSMIT                                                  ;
+; uart_tx:uart_tx0|state.CLEANUP ; Stuck at GND              ; uart_tx:uart_tx0|state.IDLE                                                      ;
+;                                ; due to stuck port data_in ;                                                                                  ;
++--------------------------------+---------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -253,24 +313,38 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24    ;
-; Number of registers using Synchronous Clear  ; 12    ;
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 12    ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |FPGA_Encryption|uart_tx:uart_tx0|clk_counter[11] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |FPGA_Encryption|uart_tx:uart_tx0|bit_index       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 7:1                ; 12 bits   ; 48 LEs        ; 12 LEs               ; 36 LEs                 ; Yes        ; |FPGA_Encryption|uart_rx:uart_rx0|clk_counter[1] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:uart_rx0 ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; IDLE           ; 000   ; Unsigned Binary                      ;
+; START          ; 001   ; Unsigned Binary                      ;
+; TRANSMIT       ; 010   ; Unsigned Binary                      ;
+; STOP           ; 011   ; Unsigned Binary                      ;
+; CLEANUP        ; 100   ; Unsigned Binary                      ;
+; CLKS_PER_BIT   ; 5208  ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------+
@@ -283,23 +357,27 @@ Encoding Type:  One-Hot
 ; TRANSMIT       ; 010   ; Unsigned Binary                      ;
 ; STOP           ; 011   ; Unsigned Binary                      ;
 ; CLEANUP        ; 100   ; Unsigned Binary                      ;
-; CLKS_PER_BIT   ; 434   ; Signed Integer                       ;
+; CLKS_PER_BIT   ; 5208  ; Signed Integer                       ;
 +----------------+-------+--------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------+
-; Port Connectivity Checks: "uart_tx:uart_tx0"            ;
-+------------+--------+----------+------------------------+
-; Port       ; Type   ; Severity ; Details                ;
-+------------+--------+----------+------------------------+
-; data[7..6] ; Input  ; Info     ; Stuck at VCC           ;
-; data[3..1] ; Input  ; Info     ; Stuck at GND           ;
-; data[5]    ; Input  ; Info     ; Stuck at GND           ;
-; data[4]    ; Input  ; Info     ; Stuck at VCC           ;
-; data[0]    ; Input  ; Info     ; Stuck at VCC           ;
-; tx_state   ; Output ; Info     ; Explicitly unconnected ;
-+------------+--------+----------+------------------------+
++-------------------------------------------------------+
+; Port Connectivity Checks: "uart_tx:uart_tx0"          ;
++----------+--------+----------+------------------------+
+; Port     ; Type   ; Severity ; Details                ;
++----------+--------+----------+------------------------+
+; tx_state ; Output ; Info     ; Explicitly unconnected ;
++----------+--------+----------+------------------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "uart_rx:uart_rx0"          ;
++----------+--------+----------+------------------------+
+; Port     ; Type   ; Severity ; Details                ;
++----------+--------+----------+------------------------+
+; rx_state ; Output ; Info     ; Explicitly unconnected ;
++----------+--------+----------+------------------------+
 
 
 +-----------------------------------------------------+
@@ -308,20 +386,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 5                           ;
-; cycloneiii_ff         ; 24                          ;
-;     ENA SCLR          ; 12                          ;
-;     plain             ; 12                          ;
-; cycloneiii_lcell_comb ; 38                          ;
-;     arith             ; 11                          ;
-;         2 data inputs ; 11                          ;
-;     normal            ; 27                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 17                          ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 2.82                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -340,7 +410,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Nov 11 01:33:25 2020
+    Info: Processing started: Fri Nov 13 19:09:53 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FPGA_Encryption -c FPGA_Encryption
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -350,24 +420,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file /users/
     Info (12023): Found entity 1: uart_tx File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file /users/reuben/github/fpga-encryption/tb/uart_tx_tb.v
     Info (12023): Found entity 1: uart_tx_tb File: C:/Users/Reuben/Github/FPGA-Encryption/tb/uart_tx_tb.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /users/reuben/github/fpga-encryption/src/uart_rx.v
+    Info (12023): Found entity 1: uart_rx File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/reuben/github/fpga-encryption/tb/uart_rx_tb.v
+    Info (12023): Found entity 1: uart_rx_tb File: C:/Users/Reuben/Github/FPGA-Encryption/tb/uart_rx_tb.v Line: 3
 Info (12127): Elaborating entity "FPGA_Encryption" for the top level hierarchy
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx0" File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 26
-Warning (10230): Verilog HDL assignment warning at uart_tx.v(56): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 56
-Warning (10230): Verilog HDL assignment warning at uart_tx.v(74): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 74
-Warning (10230): Verilog HDL assignment warning at uart_tx.v(82): truncated value with size 32 to match size of target (3) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 82
-Warning (10230): Verilog HDL assignment warning at uart_tx.v(102): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 102
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx0" File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 19
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(67): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v Line: 67
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(76): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v Line: 76
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(103): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v Line: 103
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx0" File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 29
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(57): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 57
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(75): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 75
+Warning (10230): Verilog HDL assignment warning at uart_tx.v(103): truncated value with size 32 to match size of target (12) File: C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v Line: 103
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "active" is stuck at GND File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 4
+    Warning (13410): Pin "tx" is stuck at VCC File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 5
+    Warning (13410): Pin "done" is stuck at GND File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 7
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "rx" File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 3
+    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v Line: 2
+Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4815 megabytes
-    Info: Processing ended: Wed Nov 11 01:33:31 2020
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4729 megabytes
+    Info: Processing ended: Fri Nov 13 19:09:59 2020
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:15
+    Info: Total CPU time (on all processors): 00:00:14
 
 
