@@ -1,6 +1,0 @@
-module top(
-	output tx
-
-);
-
-endmodule
