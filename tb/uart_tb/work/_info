@@ -1,0 +1,80 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Reuben/Github/FPGA-Encryption/dev/simulation/modelsim
+vuart_rx
+Z0 !s110 1606029253
+!i10b 1
+!s100 [c`2Nn=na;DX<W4OjGo9Z0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IkA@C]E9UCdH=NM6W`0FMj0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/Users/Reuben/Desktop/uart_tb
+w1606024749
+8C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v
+FC:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v
+!i122 51
+Z4 L0 1 130
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1606029253.000000
+!s107 C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+vuart_tb
+!s110 1606029254
+!i10b 1
+!s100 35zF^coPLeh6^F4fZ^c490
+R1
+I?FM[<O4`keKE:oH>CURT51
+R2
+R3
+w1606029250
+8C:/Users/Reuben/Github/FPGA-Encryption/dev/simulation/modelsim/uart_tb.v
+FC:/Users/Reuben/Github/FPGA-Encryption/dev/simulation/modelsim/uart_tb.v
+!i122 53
+L0 3 90
+R5
+r1
+!s85 0
+31
+!s108 1606029254.000000
+!s107 C:/Users/Reuben/Github/FPGA-Encryption/dev/simulation/modelsim/uart_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Reuben/Github/FPGA-Encryption/dev/simulation/modelsim/uart_tb.v|
+!i113 1
+R7
+R8
+vuart_tx
+R0
+!i10b 1
+!s100 5^]<Yn840kGWBX;=IN=ZL2
+R1
+IZfi?F7K_QRe`9K9SJ?=8`3
+R2
+R3
+w1606024610
+8C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v
+FC:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v
+!i122 52
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v|
+!i113 1
+R7
+R8

@@ -1,0 +1,48 @@
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of uart_rx.v was successful.
+# Compile of uart_tx.v was successful.
+# Compile of uart_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.uart_tb
+# vsim -gui work.uart_tb 
+# Start time: 02:14:23 on Nov 22,2020
+# Loading work.uart_tb
+# Loading work.uart_rx
+# Loading work.uart_tx
+run
+# Test Passed - Correct Byte Received
+# Byte Received = 01000111
+add wave -position insertpoint sim:/uart_tb/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Reuben  Hostname: DESKTOP-0A8P45B  ProcessID: 6884
+#           Attempting to use alternate WLF file "./wlftqarnrk".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftqarnrk
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+restart
+run
+# Test Passed - Correct Byte Received
+# Byte Received = 01000111
+# End time: 03:03:16 on Nov 22,2020, Elapsed time: 0:48:53
+# Errors: 0, Warnings: 1
