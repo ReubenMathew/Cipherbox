@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Nov 22 15:03:55 2020
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Revision Name : uart_display
+Top-level Entity Name : uart_display
+Family : Cyclone IV E
+Total logic elements : 228
+    Total combinational functions : 226
+    Dedicated logic registers : 137
+Total registers : 137
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

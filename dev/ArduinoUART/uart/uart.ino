@@ -1,4 +1,4 @@
-char cipher[6];
+char ciphertext[6];
 char receivedChar;
 boolean newData = false;
 boolean sent = false;
@@ -19,14 +19,14 @@ void setup() {
     delay(1000);
 
     for(int i = 0; i < plaintext.length(); i++){
-      cipher[i] = loopback(plaintext.charAt(i));
+      ciphertext[i] = loopback(plaintext.charAt(i));
     }
 
     Serial.println("-----------\nENCRYPTION COMPLETE:");
 
     Serial.print(plaintext);
     Serial.print(" ---> ");
-    Serial.println(cipher);
+    Serial.println(ciphertext);
     
 }
 
