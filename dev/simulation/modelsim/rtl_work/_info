@@ -10,75 +10,75 @@ z2
 cModel Technology
 Z0 dC:/Users/Reuben/Github/FPGA-Encryption/dev/simulation/modelsim
 vFPGA_Encryption
-Z1 !s110 1605145166
+!s110 1606028959
 !i10b 1
-!s100 Kl>f6gb4d;@c93E8`=^2o2
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IXAb_>9=zQBbVFbRJo[5Gc1
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 9lKFjSSfU6`dTQMPTHCTz1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I`U8^mn9M]UaRC^AG_KiSD0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1605123869
+w1606028875
 8C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v
 FC:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v
 !i122 0
-L0 1 37
-Z4 OV;L;2020.1;71
+L0 1 42
+Z3 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z5 !s108 1605145166.000000
+Z4 !s108 1606028959.000000
 !s107 C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Reuben/Github/FPGA-Encryption|C:/Users/Reuben/Github/FPGA-Encryption/FPGA_Encryption.v|
 !i113 1
-Z6 o-vlog01compat -work work
+Z5 o-vlog01compat -work work
 !s92 -vlog01compat -work work +incdir+C:/Users/Reuben/Github/FPGA-Encryption
-Z7 tCvgOpt 0
+Z6 tCvgOpt 0
 n@f@p@g@a_@encryption
 vuart_rx
-R1
+Z7 !s110 1606028960
 !i10b 1
-!s100 IMWmF60Xj1ocZ5kil;[hG0
+!s100 PA?DDzkP<:OLZA92DW`zU1
+R1
+IN@>>F^P3`LFiYjoNho`k01
 R2
-IfEL7bTn35B`aa^Q?9JSRk0
-R3
 R0
-w1605122357
+w1606024749
 8C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v
 FC:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v
 !i122 2
-L0 1 119
-R4
+Z8 L0 1 130
+R3
 r1
 !s85 0
 31
-R5
+!s108 1606028960.000000
 !s107 C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Reuben/Github/FPGA-Encryption/src|C:/Users/Reuben/Github/FPGA-Encryption/src/uart_rx.v|
 !i113 1
+R5
+Z9 !s92 -vlog01compat -work work +incdir+C:/Users/Reuben/Github/FPGA-Encryption/src
 R6
-Z8 !s92 -vlog01compat -work work +incdir+C:/Users/Reuben/Github/FPGA-Encryption/src
-R7
 vuart_tx
-R1
+R7
 !i10b 1
-!s100 X<<[RYi:7Gch2Uaj0Q@@?3
+!s100 lCLY84IOCZNkeJfICOfPn0
+R1
+I`BaC`^5iKK6Do9=S2@<C_3
 R2
-IJA9`I]AlCk@6H2dJgARmz0
-R3
 R0
-w1605122486
+w1606024610
 8C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v
 FC:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v
 !i122 1
-L0 1 131
-R4
+R8
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Reuben/Github/FPGA-Encryption/src|C:/Users/Reuben/Github/FPGA-Encryption/src/uart_tx.v|
 !i113 1
+R5
+R9
 R6
-R8
-R7

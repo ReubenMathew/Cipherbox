@@ -2,7 +2,7 @@ module uart_rx(
 	input clk,
 	input rx,
 	output done,
-	output [7:0] rx_data,
+	output reg [7:0] rx_data,
 	output [2:0] rx_state
 );
 
@@ -22,7 +22,7 @@ assign done = r_done;
 
 assign rx_state = state;
 
-// 9600 baud = 5208
+
 // 50000000 / 115200 =  434 Clocks/bit
 parameter CLKS_PER_BIT = 434;
 reg[11:0] clk_counter = 0;
@@ -33,9 +33,12 @@ reg [7:0] rx_buffer = 0;
 
 always@(posedge clk)
 begin
-
 	rx_r <= rx;
 	rx_reg <= rx_r;
+end
+
+always@(posedge clk)
+begin
 	
 	case(state)
 		IDLE:
@@ -108,6 +111,7 @@ begin
 				r_done <= 1;
 				clk_counter <= 0;
 				state <= CLEANUP;
+				rx_data <= rx_buffer;
 			end
 		end
 	
@@ -121,6 +125,6 @@ begin
 
 end
 
-assign rx_data = rx_buffer;
+//assign rx_data = rx_buffer;
 
 endmodule

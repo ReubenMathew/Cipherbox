@@ -9,6 +9,7 @@ module FPGA_Encryption(
 wire activate;
 
 wire [7:0] data;
+wire [7:0] data_out;
 
 uart_rx uart_rx0(
 	.clk(clk),
@@ -18,10 +19,18 @@ uart_rx uart_rx0(
 	.rx_state()
 );
 
+
+xor_cipher xor_cipher0(
+	.in(data),
+	.key(8'hab),
+	.out(data_out)
+);
+
+
 uart_tx uart_tx0(
 	.clk(clk),
 	.activate(activate),
-	.data(data),
+	.data(8'hff),
 	.active(active),
 	.tx(tx),
 	.done(done),

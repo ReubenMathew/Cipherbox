@@ -2,7 +2,28 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "active",
+					"strict" : false
+				},
+				{
+					"name" : "tx",
+					"strict" : false
+				},
+				{
+					"name" : "done",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rx",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

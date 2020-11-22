@@ -22,7 +22,6 @@ assign tx_state = state;
 
 reg[7:0] tx_data = 0;
 
-// 9600 baud = 5208
 // 50000000 / 115200 =  434 Clocks/bit
 parameter CLKS_PER_BIT = 434;
 reg[11:0] clk_counter = 0;
@@ -36,6 +35,7 @@ begin
 			tx <= 1;
 			done <= 0;
 			bit_index <= 0;
+			clk_counter <= 0;
 			
 			if(activate == 1)
 			begin
@@ -96,7 +96,7 @@ begin
 		
 		STOP:
 		begin
-			tx <= 0;
+			tx <= 1;
 			
 			if (clk_counter < CLKS_PER_BIT-1)
 			begin
@@ -116,6 +116,7 @@ begin
 		begin
 			done <= 1;
 			state <= IDLE;
+			tx_data <= 0;
 		end
 		
 		default: 
@@ -124,9 +125,6 @@ begin
 	endcase
 
 end
-
-
-
 
 
 endmodule

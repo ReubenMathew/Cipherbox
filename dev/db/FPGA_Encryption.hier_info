@@ -1,12 +1,31 @@
 |FPGA_Encryption
 clk => clk.IN2
 rx => rx.IN1
-active << uart_tx:uart_tx0.active
-tx << uart_tx:uart_tx0.tx
-done << uart_tx:uart_tx0.done
+active <= uart_tx:uart_tx0.active
+tx <= uart_tx:uart_tx0.tx
+done <= uart_tx:uart_tx0.done
 
 
 |FPGA_Encryption|uart_rx:uart_rx0
+clk => rx_data[0]~reg0.CLK
+clk => rx_data[1]~reg0.CLK
+clk => rx_data[2]~reg0.CLK
+clk => rx_data[3]~reg0.CLK
+clk => rx_data[4]~reg0.CLK
+clk => rx_data[5]~reg0.CLK
+clk => rx_data[6]~reg0.CLK
+clk => rx_data[7]~reg0.CLK
+clk => rx_buffer[0].CLK
+clk => rx_buffer[1].CLK
+clk => rx_buffer[2].CLK
+clk => rx_buffer[3].CLK
+clk => rx_buffer[4].CLK
+clk => rx_buffer[5].CLK
+clk => rx_buffer[6].CLK
+clk => rx_buffer[7].CLK
+clk => bit_index[0].CLK
+clk => bit_index[1].CLK
+clk => bit_index[2].CLK
 clk => clk_counter[0].CLK
 clk => clk_counter[1].CLK
 clk => clk_counter[2].CLK
@@ -25,17 +44,44 @@ clk => rx_r.CLK
 clk => state~1.DATAIN
 rx => rx_r.DATAIN
 done <= r_done.DB_MAX_OUTPUT_PORT_TYPE
-rx_data[0] <= <GND>
-rx_data[1] <= <GND>
-rx_data[2] <= <GND>
-rx_data[3] <= <GND>
-rx_data[4] <= <GND>
-rx_data[5] <= <GND>
-rx_data[6] <= <GND>
-rx_data[7] <= <GND>
+rx_data[0] <= rx_data[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rx_data[1] <= rx_data[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rx_data[2] <= rx_data[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rx_data[3] <= rx_data[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rx_data[4] <= rx_data[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rx_data[5] <= rx_data[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rx_data[6] <= rx_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rx_data[7] <= rx_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rx_state[0] <= rx_state.DB_MAX_OUTPUT_PORT_TYPE
 rx_state[1] <= rx_state.DB_MAX_OUTPUT_PORT_TYPE
 rx_state[2] <= rx_state[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FPGA_Encryption|xor_cipher:xor_cipher0
+in[0] => xor0.IN0
+in[1] => ~NO_FANOUT~
+in[2] => ~NO_FANOUT~
+in[3] => ~NO_FANOUT~
+in[4] => ~NO_FANOUT~
+in[5] => ~NO_FANOUT~
+in[6] => ~NO_FANOUT~
+in[7] => ~NO_FANOUT~
+key[0] => xor0.IN1
+key[1] => ~NO_FANOUT~
+key[2] => ~NO_FANOUT~
+key[3] => ~NO_FANOUT~
+key[4] => ~NO_FANOUT~
+key[5] => ~NO_FANOUT~
+key[6] => ~NO_FANOUT~
+key[7] => ~NO_FANOUT~
+out[0] <= xor0.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= <GND>
+out[2] <= <GND>
+out[3] <= <GND>
+out[4] <= <GND>
+out[5] <= <GND>
+out[6] <= <GND>
+out[7] <= <GND>
 
 
 |FPGA_Encryption|uart_tx:uart_tx0
@@ -48,6 +94,18 @@ clk => tx_data[5].CLK
 clk => tx_data[6].CLK
 clk => tx_data[7].CLK
 clk => active~reg0.CLK
+clk => clk_counter[0].CLK
+clk => clk_counter[1].CLK
+clk => clk_counter[2].CLK
+clk => clk_counter[3].CLK
+clk => clk_counter[4].CLK
+clk => clk_counter[5].CLK
+clk => clk_counter[6].CLK
+clk => clk_counter[7].CLK
+clk => clk_counter[8].CLK
+clk => clk_counter[9].CLK
+clk => clk_counter[10].CLK
+clk => clk_counter[11].CLK
 clk => bit_index[0].CLK
 clk => bit_index[1].CLK
 clk => bit_index[2].CLK
@@ -63,8 +121,8 @@ activate => tx_data.OUTPUTSELECT
 activate => tx_data.OUTPUTSELECT
 activate => tx_data.OUTPUTSELECT
 activate => tx_data.OUTPUTSELECT
-activate => Selector3.IN3
-activate => Selector2.IN2
+activate => Selector27.IN3
+activate => Selector26.IN2
 data[0] => tx_data.DATAB
 data[1] => tx_data.DATAB
 data[2] => tx_data.DATAB
@@ -76,7 +134,7 @@ data[7] => tx_data.DATAB
 active <= active~reg0.DB_MAX_OUTPUT_PORT_TYPE
 tx <= tx~reg0.DB_MAX_OUTPUT_PORT_TYPE
 done <= done~reg0.DB_MAX_OUTPUT_PORT_TYPE
-tx_state[0] <= tx.DB_MAX_OUTPUT_PORT_TYPE
+tx_state[0] <= tx_state.DB_MAX_OUTPUT_PORT_TYPE
 tx_state[1] <= tx_state.DB_MAX_OUTPUT_PORT_TYPE
 tx_state[2] <= tx_state[2].DB_MAX_OUTPUT_PORT_TYPE
 

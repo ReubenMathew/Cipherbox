@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Nov 13 19:09:59 2020
+Analysis & Synthesis Status : Successful - Sun Nov 22 03:06:12 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : FPGA_Encryption
 Top-level Entity Name : FPGA_Encryption
 Family : Cyclone IV E
-Total logic elements : 0
-    Total combinational functions : 0
-    Dedicated logic registers : 0
-Total registers : 0
+Total logic elements : 77
+    Total combinational functions : 76
+    Dedicated logic registers : 47
+Total registers : 47
 Total pins : 5
 Total virtual pins : 0
 Total memory bits : 0

@@ -42,21 +42,25 @@ parameter CLK_PERIOD = 20;
 
 // wire [2:0] state;
 wire activate;
+wire [2:0] rx_state;
 
 uart_rx uart_rx0(
 	.clk(clk),
 	.rx(r_Rx_Serial),
 	.done(activate),
 	.rx_data(data),
-	.rx_state()
+	.rx_state(rx_state)
 );
+
+wire [7:0] data_out;
+assign data_out = data ^ 8'hff;
 
 wire tx_active, tx_done, tx;
 
 uart_tx uart_tx0(
 	.clk(clk),
 	.activate(activate),
-	.data(data),
+	.data(data_out),
 	.active(tx_active),
 	.tx(tx),
 	.done(tx_done),
