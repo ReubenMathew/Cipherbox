@@ -1,4 +1,4 @@
-# EECS3201 - Design Project
+# Cipherbox
 **Reuben Ninan**
 
 ### Description
